@@ -60,6 +60,7 @@ This variable does not affect non-interactive use.")
     (setq insert-random-last-count count)
     count))
 
+;;;###autoload
 (defun insert-random (charset count)
   "Insert COUNT random characters from the string CHARSET."
   (interactive
