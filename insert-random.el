@@ -32,15 +32,15 @@
 ;; - test input when writing code
 
 ;; - examples of hashes, numbers, etc. when writing documentation and
-;; - specifications
+;;   specifications
 
 ;; For example:
 
 ;; - C-u 40 M-x insert-random-hex-lowercase gives a random git commit
-;; - hash
+;;   hash
 
 ;; - C-u 10 insert-random-alphanumeric can generate a random
-;; - 10-character password
+;;   10-character password
 
 ;;; Code:
 
