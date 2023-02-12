@@ -121,12 +121,25 @@ This variable does not affect non-interactive use.")
          (interactive (list (insert-random--count current-prefix-arg)))
          (insert-random ,symbol count)))))
 
+;;;###autoload
 (insert-random--define insert-random-lowercase "az")
+
+;;;###autoload
 (insert-random--define insert-random-uppercase "AZ")
+
+;;;###autoload
 (insert-random--define insert-random-alphabetic "azAZ")
+
+;;;###autoload
 (insert-random--define insert-random-alphanumeric "azAZ09")
+
+;;;###autoload
 (insert-random--define insert-random-digits "09")
+
+;;;###autoload
 (insert-random--define insert-random-hex-uppercase "09AF")
+
+;;;###autoload
 (insert-random--define insert-random-hex-lowercase "09af")
 
 (provide 'insert-random)
