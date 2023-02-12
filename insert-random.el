@@ -59,21 +59,18 @@ This variable does not affect non-interactive use.")
 
 (defun insert-random--count (arg)
   "Internal function to get count from raw prefix argument ARG."
-  (let ((count
-         (cond ((integerp arg)
-                arg)
-               ((and (consp arg)
-                     (integerp (car arg))
-                     (null (cdr arg)))
-                ;; C-u creates the list (4).
-                ;; C-u C-u creates the list (16).
-                ;; etc.
-                (car arg))
-               (t
-                (let ((arg insert-random-last-count))
-                  (if (integerp arg) arg 1))))))
-    (setq insert-random-last-count count)
-    count))
+  (when (and (consp arg) (null (cdr arg)))
+    ;; C-u gives the list (4).
+    ;; C-u C-u gives the list (16).
+    ;; C-u C-u C-u gives the list (64).
+    ;; etc.
+    (setq arg (car arg)))
+  (unless (integerp arg)
+    (setq arg insert-random-last-count))
+  (unless (integerp arg)
+    (setq arg 1))
+  (setq insert-random-last-count arg)
+  arg)
 
 ;;;###autoload
 (defun insert-random (charset count)
