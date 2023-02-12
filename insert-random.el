@@ -129,6 +129,14 @@ This variable does not affect non-interactive use.")
 (insert-random--define insert-random-hex-uppercase "09AF")
 (insert-random--define insert-random-hex-lowercase "09af")
 
+;;;###autoload (autoload 'insert-random-lowercase "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-uppercase "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-alphabetic "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-alphanumeric "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-digits "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-hex-uppercase "insert-random" nil t)
+;;;###autoload (autoload 'insert-random-hex-lowercase "insert-random" nil t)
+
 (provide 'insert-random)
 
 ;;; insert-random.el ends here
