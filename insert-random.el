@@ -1,6 +1,6 @@
 ;;; insert-random.el --- Insert random characters from various character sets -*- lexical-binding: t -*-
 
-;; Copyright 2022 Lassi Kortela
+;; Copyright 2022, 2023 Lassi Kortela
 ;; SPDX-License-Identifier: ISC
 
 ;; Author: Lassi Kortela <lassi@lassi.io>
